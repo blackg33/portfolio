@@ -1,0 +1,183 @@
+/*------------VARIABLES--------------*/
+/*-------------HEADER-------------*/
+body, html {
+  height: 100%; }
+
+body {
+  font-family: Lora, serif;
+  font-size: 15px; }
+
+h2 {
+  font-family: Poiret One, cursive;
+  font-size: 50px;
+  margin: 5px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding-top: 40px;
+  text-align: center; }
+
+header {
+  background-color: #00001F;
+  position: fixed;
+  height: 80px;
+  opacity: 50%;
+  top: 0;
+  width: 100%;
+  border: 1px solid green;
+  z-index: 100; }
+
+nav ul {
+  float: right;
+  list-style: none;
+  margin-right: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+nav li {
+  display: inline-block;
+  padding: 8px;
+  font-family: Poiret One, cursive;
+  font-size: 20px; }
+nav a {
+  color: #fff;
+  text-decoration: none; }
+nav a:hover {
+  text-decoration: line-through; }
+
+.back {
+  border: 1px solid red;
+  color: #00001F;
+  margin-left: 20px;
+  padding: 10px;
+  position: relative;
+  top: 20px; }
+
+/*-----------BODY CONTENT--------------*/
+#wrapper {
+  border: 1px solid yellow;
+  margin-top: 80px;
+  height: 90%; }
+  #wrapper #intro {
+    border: 1px solid red;
+    height: 100%; }
+    #wrapper #intro #fixed {
+      background-size: cover;
+      background-position: bottom;
+      position: fixed;
+      height: 90%;
+      width: 100%;
+      z-index: -100; }
+    #wrapper #intro #title {
+      position: relative;
+      top: 30%;
+      text-align: center; }
+      #wrapper #intro #title h1 {
+        font-family: Poiret One, cursive;
+        font-size: 75px; }
+      #wrapper #intro #title h3 {
+        font-size: 30px;
+        font-family: Josefin Slab, serif;
+        margin: 20px; }
+  #wrapper #scroll {
+    height: 100%; }
+    #wrapper #scroll #about, #wrapper #scroll #work, #wrapper #scroll #contact {
+      background-color: #fff;
+      padding: 30px;
+      padding-top: 100px;
+      height: 80%;
+      border: 1px solid purple; }
+    #wrapper #scroll h2 {
+      font-size: 40px;
+      text-align: center; }
+    #wrapper #scroll #about {
+      border: 1px solid orange;
+      clear: both; }
+    #wrapper #scroll #work .pieces {
+      border: 1px solid yellow;
+      text-align: center; }
+      #wrapper #scroll #work .pieces .box {
+        border: 1px solid red;
+        border-radius: 5px;
+        display: inline-block;
+        height: 250px;
+        overflow: hidden;
+        width: 30%; }
+      #wrapper #scroll #work .pieces #work1 {
+        background: url("../img/logo.png");
+        background-size: cover;
+        background-position: center; }
+      #wrapper #scroll #work .pieces #work2 {
+        background: url("../img/CITF-home.png");
+        background-size: cover;
+        background-position: center; }
+      #wrapper #scroll #work .pieces #work3 {
+        background: url("../img/logo.png");
+        background-size: cover;
+        background-position: center; }
+      #wrapper #scroll #work .pieces .box:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        /* Firefox */
+        -ms-transform: scale(1.1);
+        /* IE 9 */
+        -o-transform: scale(1.1);
+        /* Opera */
+        transform: scale(1.1); }
+      #wrapper #scroll #work .pieces .overlay {
+        background: rgba(0, 0, 0, 0.75);
+        height: 250px;
+        text-align: center;
+        opacity: 0;
+        width: 100%;
+        -webkit-transition: opacity .25s ease;
+        -moz-transition: opacity .25s ease; }
+        #wrapper #scroll #work .pieces .overlay p {
+          color: #fff;
+          padding: 5px;
+          position: relative;
+          top: 60px; }
+        #wrapper #scroll #work .pieces .overlay .title {
+          font-family: Poiret One, cursive;
+          font-size: 30px; }
+        #wrapper #scroll #work .pieces .overlay .description {
+          font-size: 12px; }
+      #wrapper #scroll #work .pieces .box:hover .overlay {
+        opacity: 1; }
+    #wrapper #scroll #contact p {
+      margin: 0 auto;
+      padding-top: 20px;
+      width: 45%; }
+    #wrapper #scroll #contact ul {
+      padding-top: 130px;
+      margin: 0 auto;
+      width: 40%; }
+    #wrapper #scroll #contact ul li {
+      float: left;
+      margin: 9px; }
+    #wrapper #scroll #contact a {
+      padding: 10px;
+      position: inline-block;
+      color: #00001F;
+      text-decoration: none; }
+    #wrapper #scroll #contact li:hover {
+      font-size: 20px;
+      margin: 0; }
+  #wrapper img {
+    border: 1px solid red;
+    float: left;
+    width: 60%; }
+
+ /*END WRAPPER
+
+/*-----------FOOTER--------------*/
+footer {
+  clear: both;
+  background-color: #00001F;
+  height: 50px; }
+  footer p {
+    color: #fff;
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 15%; }
+
+/*# sourceMappingURL=style.css.map */
