@@ -1,4 +1,9 @@
 /*------------VARIABLES--------------*/
+@keyframes rainbow {
+  0% {
+    background-color: #1B998B; }
+  100% {
+    background-color: #1B4E8B; } }
 /*-------------HEADER-------------*/
 body, html {
   height: 100%; }
@@ -23,38 +28,48 @@ header {
   opacity: 50%;
   top: 0;
   width: 100%;
-  border: 1px solid green;
   z-index: 100; }
-
-nav ul {
-  float: right;
-  list-style: none;
-  margin-right: 10px;
-  position: absolute;
-  bottom: 0;
-  right: 0; }
-nav li {
-  display: inline-block;
-  padding: 8px;
-  font-family: Poiret One, cursive;
-  font-size: 20px; }
-nav a {
-  color: #fff;
-  text-decoration: none; }
-nav a:hover {
-  text-decoration: line-through; }
-
-.back {
-  border: 1px solid red;
-  color: #00001F;
-  margin-left: 20px;
-  padding: 10px;
-  position: relative;
-  top: 20px; }
+  header #sm_logo {
+    color: #fff;
+    font-family: Poiret One, cursive;
+    font-size: 50px;
+    padding: 15px;
+    position: relative;
+    top: 20px;
+    text-decoration: none; }
+  header nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  header nav li {
+    display: inline-block;
+    padding: 8px;
+    font-family: Poiret One, cursive;
+    font-size: 20px; }
+  header nav a {
+    color: #fff;
+    text-decoration: none; }
+  header nav a:hover {
+    text-decoration: line-through; }
+  header nav .back {
+    float: right;
+    margin: 5px;
+    padding-right: 25px; }
+  header nav .back:hover {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    /* Firefox */
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -o-transform: scale(1.5);
+    /* Opera */
+    transform: scale(1.5); }
 
 /*-----------BODY CONTENT--------------*/
 #wrapper {
-  border: 1px solid yellow;
   margin-top: 80px;
   height: 90%; }
   #wrapper #intro {
@@ -93,10 +108,8 @@ nav a:hover {
       border: 1px solid orange;
       clear: both; }
     #wrapper #scroll #work .pieces {
-      border: 1px solid yellow;
       text-align: center; }
       #wrapper #scroll #work .pieces .box {
-        border: 1px solid red;
         border-radius: 5px;
         display: inline-block;
         height: 250px;
@@ -135,12 +148,12 @@ nav a:hover {
           color: #fff;
           padding: 5px;
           position: relative;
-          top: 60px; }
+          top: 50px; }
         #wrapper #scroll #work .pieces .overlay .title {
           font-family: Poiret One, cursive;
           font-size: 30px; }
         #wrapper #scroll #work .pieces .overlay .description {
-          font-size: 12px; }
+          font-size: 15px; }
       #wrapper #scroll #work .pieces .box:hover .overlay {
         opacity: 1; }
     #wrapper #scroll #contact p {
@@ -148,7 +161,7 @@ nav a:hover {
       padding-top: 20px;
       width: 45%; }
     #wrapper #scroll #contact ul {
-      padding-top: 130px;
+      padding-top: 200px;
       margin: 0 auto;
       width: 40%; }
     #wrapper #scroll #contact ul li {
@@ -163,9 +176,31 @@ nav a:hover {
       font-size: 20px;
       margin: 0; }
   #wrapper img {
-    border: 1px solid red;
     float: left;
     width: 60%; }
+  #wrapper #sidebar .live {
+    background-color: #1B998B;
+    border-radius: 5px;
+    color: #fff;
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    margin-left: 25px;
+    text-decoration: none; }
+  #wrapper #sidebar .live:hover {
+    animation-name: rainbow;
+    animation-duration: 3s; }
+  #wrapper #sidebar .details {
+    float: left;
+    margin: 2%;
+    width: 33%; }
+    #wrapper #sidebar .details h3 {
+      font-family: Poiret One, cursive;
+      font-size: 30px;
+      padding: 5px; }
+    #wrapper #sidebar .details p {
+      line-height: 120%;
+      padding: 5px; }
 
  /*END WRAPPER
 
@@ -179,5 +214,7 @@ footer {
     margin: 0 auto;
     padding-top: 15px;
     width: 15%; }
+
+/*-----------2NDARY--------------*/
 
 /*# sourceMappingURL=style.css.map */
