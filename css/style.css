@@ -121,6 +121,14 @@ header {
         background: url("../img/pattern-block.png");
         background-size: 100%;
         background-repeat: no-repeat; }
+        #wrapper #scroll #about #pattern #text {
+          font-size: 17px;
+          width: 55%;
+          margin: 0 auto;
+          line-height: 140%;
+          position: relative;
+          top: 23%;
+          left: 5%; }
       #wrapper #scroll #about h2 {
         position: relative;
         left: 3px; }

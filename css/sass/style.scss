@@ -213,6 +213,17 @@ header{
 				background: $back5;
 				background-size:100%;
 				background-repeat: no-repeat;
+
+				#text{
+					font-size: 17px;
+					//text-align: center;
+					width:55%;
+					margin: 0 auto;
+					line-height: 140%;
+					position:relative;
+					top:23%;
+					left:5%;
+				}
 			}
 
 			h2{
