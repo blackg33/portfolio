@@ -123,6 +123,7 @@ header {
         background-repeat: no-repeat; }
         #wrapper #scroll #about #pattern #text {
           font-size: 17px;
+          font-family: Lora, serif;
           width: 55%;
           margin: 0 auto;
           line-height: 140%;
@@ -187,9 +188,13 @@ header {
     #wrapper #scroll #contact {
       background: url("../img/gradient3.png"); }
       #wrapper #scroll #contact p {
+        font-family: Lora, serif;
+        font-size: 17px;
         margin: 0 auto;
         padding-top: 20px;
-        width: 45%; }
+        width: 55%;
+        position: relative;
+        left: 25px; }
       #wrapper #scroll #contact ul {
         padding-top: 200px;
         margin: 0 auto;
@@ -230,6 +235,7 @@ header {
       font-size: 30px;
       padding: 5px; }
     #wrapper #sidebar .details p {
+      font-family: Lora, serif;
       line-height: 120%;
       padding: 5px; }
 

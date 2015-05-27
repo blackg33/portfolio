@@ -52,6 +52,7 @@ h2{
 	text-align:center;
 }
 
+
 header{
 	//display:none;
 	background-color:$black;
@@ -216,6 +217,7 @@ header{
 
 				#text{
 					font-size: 17px;
+					font-family: $main_font;
 					//text-align: center;
 					width:55%;
 					margin: 0 auto;
@@ -313,9 +315,13 @@ header{
 			background:url('../img/gradient3.png');
 
 			p{
+				font-family: $main_font;
+				font-size: 17px;
 				margin:0 auto;
 				padding-top:20px;
-				width:45%;
+				width:55%;
+				position: relative;
+				left:25px;
 			}
 
 			ul {
@@ -383,6 +389,7 @@ header{
 		}
 
 		p{
+			font-family: $main_font;
 			line-height: 120%;
 			padding:5px;
 		}
