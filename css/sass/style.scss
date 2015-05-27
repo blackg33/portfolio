@@ -23,12 +23,15 @@ $work2: url('../img/CITF-home.png');
 $work3: url('../img/logo.png');
 
 //BACKGROUND IMAGES
-$back1: url('../img/back1.png');
+//$back1: url('../img/back1.png');
+$back1: url('../img/gradient1.png');
+$gradient2: url('../img/gradient2.png');
+$gradient3: url('../img/gradient3.png');
+$back2: url('../img/pattern2.jpg');
+$back3: url('../img/pattern3.png');
+$back4: url('../img/pattern-long.png');
+$back5: url('../img/pattern-block.png');
 
-@keyframes rainbow{
-	0% {background-color:$accent;}
-	100% {background-color:$accent2;}
-}
 /*-------------HEADER-------------*/
 body, html {
    height: 100%;
@@ -59,7 +62,7 @@ header{
 	width: 100%;
 	z-index:100;
 
-	#sm_logo{
+	#sm_logo, #sm_logo_perm{
 		//border:1px solid $white;
 		//border-radius:35px;
 		color:$white;
@@ -69,6 +72,14 @@ header{
 		position:relative;
 		top:20px;
 		text-decoration: none;
+	}
+
+	#sm_logo{
+		opacity: 0;
+	}
+
+	#sm_logo:hover, #sm_logo_perm:hover{
+		color: $accent;
 	}
 
 	nav {
@@ -97,6 +108,7 @@ header{
 
 		a:hover{
 		text-decoration:line-through;
+		color:$accent;
 		}
 
 		.back{
@@ -106,12 +118,14 @@ header{
 			padding-right:25px;
 		}
 
-		.back:hover{
+		.back :hover{
+			/*
 			-webkit-transform: scale(1.5);
-			-moz-transform:scale(1.5); /* Firefox */
-			-ms-transform:scale(1.5); /* IE 9 */
-			-o-transform:scale(1.5); /* Opera */
- 			transform:scale(1.5);
+			-moz-transform:scale(1.5); 
+			-ms-transform:scale(1.5); 
+			-o-transform:scale(1.5); 
+ 			transform:scale(1.5);*/
+ 			text-decoration: none;
 		}
 
 	}
@@ -124,12 +138,11 @@ header{
 	height: 90%;
 
 		#intro{
-
-			border:1px solid red;
+			//border:1px solid red;
 			height: 100%;
 
 			#fixed{
-			//background: $back1;
+			background: $back1;
 			background-size:cover;
 			background-position: bottom;
 			position:fixed;
@@ -144,6 +157,7 @@ header{
 				top:30%;
 				//left:30%;
 				text-align: center;
+				z-index: 50;
 
 				h1{
 				font-family: $heading_font;
@@ -155,17 +169,23 @@ header{
 				font-family: $light_font;
 				margin:20px;
 				}
+
+				i{
+					color:$white;
+					position:relative;
+					top:130px;
+				}
 		}
 	}
 	#scroll{
 		height:100%;
 
 		#about, #work, #contact{
-			background-color:$white;
+			//background-color:$white;
 			padding:30px;
 			padding-top:100px;
 			height: 80%;
-			border: 1px solid purple;
+			//border: 1px solid purple;
 		}
 
 
@@ -175,11 +195,35 @@ header{
 		}
 
 		#about{
-			border:1px solid orange;
+			//background:$back4;
+			background-size:100%;
+			background-repeat: no-repeat;
+			background-position: 0 -50;
+			//border:1px solid orange;
 			clear:both;
+			height:100%;
+
+			#pattern{
+				border:1px solid transparent;
+				border-radius:5px;
+				//height:365px;
+				height:100%;
+				width:100%;
+				margin: 0 auto;
+				background: $back5;
+				background-size:100%;
+				background-repeat: no-repeat;
+			}
+
+			h2{
+				position:relative;
+				left:3px;
+			}
 		}
 
 		#work{
+
+			background-color:$white;
 
 			.pieces{
 				text-align: center;
@@ -188,6 +232,7 @@ header{
 
 				.box {
 					border-radius:5px;
+					border:1px solid black;
 					display: inline-block;
 					height: 250px;
 					overflow:hidden;
@@ -254,6 +299,8 @@ header{
 		}
 		#contact{
 
+			background:url('../img/gradient3.png');
+
 			p{
 				margin:0 auto;
 				padding-top:20px;
@@ -274,7 +321,7 @@ header{
 			a{				
                 padding: 10px;
 				position: inline-block;
-				color: $black;
+				color: $white;
 				text-decoration: none;
 			}
 
@@ -298,15 +345,19 @@ header{
 		border-radius:5px;
 		color: $white;
 		float:left;
-		padding:10px;
+		padding:15px;
 		margin:5px;
 		margin-left:25px;
 		text-decoration: none;
 	}
 
 	.live:hover{
-		animation-name: rainbow;
-		animation-duration: 3s;
+		//animation-name: rainbow;
+		//animation-duration: 3s;
+		//background-color: $accent2;
+		color: $accent;
+		background-color:$white;
+		border:2px solid $accent;
 	}
 
 	.details{

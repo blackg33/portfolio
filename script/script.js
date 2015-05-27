@@ -7,8 +7,14 @@ $(document).ready(function(){
 	        var target = $(this).data('target');
 	            $('html, body').animate({
 	            scrollTop: $(target).offset().top
-	        }, 800);
+	        }, 600);
 	 });
+
+	 $('.home').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+
 
 	$(window).scroll(function () {
 	    var scrollTop = $(window).scrollTop();
@@ -18,6 +24,10 @@ $(document).ready(function(){
 	        //'opacity': ((height - scrollTop) / height)
 	        'opacity': (( 250-scrollTop )/250)+0.1
 	    }); 
+
+	    $('#sm_logo').css({
+	    	'opacity': ((scrollTop)/800)
+	    });
 	});
 
 });

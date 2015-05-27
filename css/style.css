@@ -1,9 +1,4 @@
 /*------------VARIABLES--------------*/
-@keyframes rainbow {
-  0% {
-    background-color: #1B998B; }
-  100% {
-    background-color: #1B4E8B; } }
 /*-------------HEADER-------------*/
 body, html {
   height: 100%; }
@@ -29,7 +24,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 100; }
-  header #sm_logo {
+  header #sm_logo, header #sm_logo_perm {
     color: #fff;
     font-family: Poiret One, cursive;
     font-size: 50px;
@@ -37,6 +32,10 @@ header {
     position: relative;
     top: 20px;
     text-decoration: none; }
+  header #sm_logo {
+    opacity: 0; }
+  header #sm_logo:hover, header #sm_logo_perm:hover {
+    color: #1B998B; }
   header nav ul {
     float: right;
     list-style: none;
@@ -53,29 +52,29 @@ header {
     color: #fff;
     text-decoration: none; }
   header nav a:hover {
-    text-decoration: line-through; }
+    text-decoration: line-through;
+    color: #1B998B; }
   header nav .back {
     float: right;
     margin: 5px;
     padding-right: 25px; }
-  header nav .back:hover {
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    /* Firefox */
-    -ms-transform: scale(1.5);
-    /* IE 9 */
-    -o-transform: scale(1.5);
-    /* Opera */
-    transform: scale(1.5); }
+  header nav .back :hover {
+    			/*
+    			-webkit-transform: scale(1.5);
+    			-moz-transform:scale(1.5); 
+    			-ms-transform:scale(1.5); 
+    			-o-transform:scale(1.5); 
+     			transform:scale(1.5);*/
+    text-decoration: none; }
 
 /*-----------BODY CONTENT--------------*/
 #wrapper {
   margin-top: 80px;
   height: 90%; }
   #wrapper #intro {
-    border: 1px solid red;
     height: 100%; }
     #wrapper #intro #fixed {
+      background: url("../img/gradient1.png");
       background-size: cover;
       background-position: bottom;
       position: fixed;
@@ -85,7 +84,8 @@ header {
     #wrapper #intro #title {
       position: relative;
       top: 30%;
-      text-align: center; }
+      text-align: center;
+      z-index: 50; }
       #wrapper #intro #title h1 {
         font-family: Poiret One, cursive;
         font-size: 75px; }
@@ -93,88 +93,110 @@ header {
         font-size: 30px;
         font-family: Josefin Slab, serif;
         margin: 20px; }
+      #wrapper #intro #title i {
+        color: #fff;
+        position: relative;
+        top: 130px; }
   #wrapper #scroll {
     height: 100%; }
     #wrapper #scroll #about, #wrapper #scroll #work, #wrapper #scroll #contact {
-      background-color: #fff;
       padding: 30px;
       padding-top: 100px;
-      height: 80%;
-      border: 1px solid purple; }
+      height: 80%; }
     #wrapper #scroll h2 {
       font-size: 40px;
       text-align: center; }
     #wrapper #scroll #about {
-      border: 1px solid orange;
-      clear: both; }
-    #wrapper #scroll #work .pieces {
-      text-align: center; }
-      #wrapper #scroll #work .pieces .box {
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: 0 -50;
+      clear: both;
+      height: 100%; }
+      #wrapper #scroll #about #pattern {
+        border: 1px solid transparent;
         border-radius: 5px;
-        display: inline-block;
-        height: 250px;
-        overflow: hidden;
-        width: 30%; }
-      #wrapper #scroll #work .pieces #work1 {
-        background: url("../img/logo.png");
-        background-size: cover;
-        background-position: center; }
-      #wrapper #scroll #work .pieces #work2 {
-        background: url("../img/CITF-home.png");
-        background-size: cover;
-        background-position: center; }
-      #wrapper #scroll #work .pieces #work3 {
-        background: url("../img/logo.png");
-        background-size: cover;
-        background-position: center; }
-      #wrapper #scroll #work .pieces .box:hover {
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        /* Firefox */
-        -ms-transform: scale(1.1);
-        /* IE 9 */
-        -o-transform: scale(1.1);
-        /* Opera */
-        transform: scale(1.1); }
-      #wrapper #scroll #work .pieces .overlay {
-        background: rgba(0, 0, 0, 0.75);
-        height: 250px;
-        text-align: center;
-        opacity: 0;
+        height: 100%;
         width: 100%;
-        -webkit-transition: opacity .25s ease;
-        -moz-transition: opacity .25s ease; }
-        #wrapper #scroll #work .pieces .overlay p {
-          color: #fff;
-          padding: 5px;
-          position: relative;
-          top: 50px; }
-        #wrapper #scroll #work .pieces .overlay .title {
-          font-family: Poiret One, cursive;
-          font-size: 30px; }
-        #wrapper #scroll #work .pieces .overlay .description {
-          font-size: 15px; }
-      #wrapper #scroll #work .pieces .box:hover .overlay {
-        opacity: 1; }
-    #wrapper #scroll #contact p {
-      margin: 0 auto;
-      padding-top: 20px;
-      width: 45%; }
-    #wrapper #scroll #contact ul {
-      padding-top: 200px;
-      margin: 0 auto;
-      width: 40%; }
-    #wrapper #scroll #contact ul li {
-      float: left;
-      margin: 9px; }
-    #wrapper #scroll #contact a {
-      padding: 10px;
-      position: inline-block;
-      color: #00001F;
-      text-decoration: none; }
-    #wrapper #scroll #contact li:hover {
-      font-size: 20px;
-      margin: 0; }
+        margin: 0 auto;
+        background: url("../img/pattern-block.png");
+        background-size: 100%;
+        background-repeat: no-repeat; }
+      #wrapper #scroll #about h2 {
+        position: relative;
+        left: 3px; }
+    #wrapper #scroll #work {
+      background-color: #fff; }
+      #wrapper #scroll #work .pieces {
+        text-align: center; }
+        #wrapper #scroll #work .pieces .box {
+          border-radius: 5px;
+          border: 1px solid black;
+          display: inline-block;
+          height: 250px;
+          overflow: hidden;
+          width: 30%; }
+        #wrapper #scroll #work .pieces #work1 {
+          background: url("../img/logo.png");
+          background-size: cover;
+          background-position: center; }
+        #wrapper #scroll #work .pieces #work2 {
+          background: url("../img/CITF-home.png");
+          background-size: cover;
+          background-position: center; }
+        #wrapper #scroll #work .pieces #work3 {
+          background: url("../img/logo.png");
+          background-size: cover;
+          background-position: center; }
+        #wrapper #scroll #work .pieces .box:hover {
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          /* Firefox */
+          -ms-transform: scale(1.1);
+          /* IE 9 */
+          -o-transform: scale(1.1);
+          /* Opera */
+          transform: scale(1.1); }
+        #wrapper #scroll #work .pieces .overlay {
+          background: rgba(0, 0, 0, 0.75);
+          height: 250px;
+          text-align: center;
+          opacity: 0;
+          width: 100%;
+          -webkit-transition: opacity .25s ease;
+          -moz-transition: opacity .25s ease; }
+          #wrapper #scroll #work .pieces .overlay p {
+            color: #fff;
+            padding: 5px;
+            position: relative;
+            top: 50px; }
+          #wrapper #scroll #work .pieces .overlay .title {
+            font-family: Poiret One, cursive;
+            font-size: 30px; }
+          #wrapper #scroll #work .pieces .overlay .description {
+            font-size: 15px; }
+        #wrapper #scroll #work .pieces .box:hover .overlay {
+          opacity: 1; }
+    #wrapper #scroll #contact {
+      background: url("../img/gradient3.png"); }
+      #wrapper #scroll #contact p {
+        margin: 0 auto;
+        padding-top: 20px;
+        width: 45%; }
+      #wrapper #scroll #contact ul {
+        padding-top: 200px;
+        margin: 0 auto;
+        width: 40%; }
+      #wrapper #scroll #contact ul li {
+        float: left;
+        margin: 9px; }
+      #wrapper #scroll #contact a {
+        padding: 10px;
+        position: inline-block;
+        color: #fff;
+        text-decoration: none; }
+      #wrapper #scroll #contact li:hover {
+        font-size: 20px;
+        margin: 0; }
   #wrapper img {
     float: left;
     width: 60%; }
@@ -183,13 +205,14 @@ header {
     border-radius: 5px;
     color: #fff;
     float: left;
-    padding: 10px;
+    padding: 15px;
     margin: 5px;
     margin-left: 25px;
     text-decoration: none; }
   #wrapper #sidebar .live:hover {
-    animation-name: rainbow;
-    animation-duration: 3s; }
+    color: #1B998B;
+    background-color: #fff;
+    border: 2px solid #1B998B; }
   #wrapper #sidebar .details {
     float: left;
     margin: 2%;
