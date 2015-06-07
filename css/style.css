@@ -111,25 +111,34 @@ header {
       background-repeat: no-repeat;
       background-position: 0 -50;
       clear: both;
-      height: 100%; }
+      height: 100vh; }
       #wrapper #scroll #about #pattern {
-        border: 1px solid transparent;
         border-radius: 5px;
-        height: 100%;
-        width: 100%;
+        height: 80%;
+        width: 95%;
         margin: 0 auto;
+        position: relative;
         background: url("../img/pattern-block.png");
-        background-size: 100%;
+        background-position: center;
         background-repeat: no-repeat; }
         #wrapper #scroll #about #pattern #text {
           font-size: 17px;
           font-family: Lora, serif;
-          width: 55%;
+          width: 75%;
           margin: 0 auto;
           line-height: 140%;
-          position: relative;
+          position: absolute;
           top: 23%;
-          left: 5%; }
+          left: 12%; }
+          #wrapper #scroll #about #pattern #text h3 {
+            font-family: Poiret One, cursive;
+            font-size: 30px;
+            margin-bottom: 20px; }
+          #wrapper #scroll #about #pattern #text a {
+            text-decoration: none;
+            color: #1B998B; }
+          #wrapper #scroll #about #pattern #text a:hover {
+            text-decoration: line-through; }
       #wrapper #scroll #about h2 {
         position: relative;
         left: 3px; }
@@ -145,7 +154,7 @@ header {
           overflow: hidden;
           width: 30%; }
         #wrapper #scroll #work .pieces #work1 {
-          background: url("../img/logo.png");
+          background: url("../img/doors-open.png");
           background-size: cover;
           background-position: center; }
         #wrapper #scroll #work .pieces #work2 {
@@ -153,7 +162,7 @@ header {
           background-size: cover;
           background-position: center; }
         #wrapper #scroll #work .pieces #work3 {
-          background: url("../img/logo.png");
+          background: url("../img/graffito.png");
           background-size: cover;
           background-position: center; }
         #wrapper #scroll #work .pieces .box:hover {
@@ -190,26 +199,23 @@ header {
       #wrapper #scroll #contact p {
         font-family: Lora, serif;
         font-size: 17px;
-        margin: 0 auto;
         padding-top: 20px;
-        width: 55%;
         position: relative;
-        left: 25px; }
+        text-align: center; }
       #wrapper #scroll #contact ul {
         padding-top: 200px;
         margin: 0 auto;
-        width: 40%; }
+        width: 100%;
+        text-align: center; }
       #wrapper #scroll #contact ul li {
-        float: left;
-        margin: 9px; }
+        display: inline-block;
+        width: 10%; }
       #wrapper #scroll #contact a {
         padding: 10px;
-        position: inline-block;
         color: #fff;
         text-decoration: none; }
-      #wrapper #scroll #contact li:hover {
-        font-size: 20px;
-        margin: 0; }
+      #wrapper #scroll #contact li a:hover {
+        color: #00001F; }
   #wrapper img {
     float: left;
     width: 60%; }
@@ -248,10 +254,18 @@ footer {
   height: 50px; }
   footer p {
     color: #fff;
-    margin: 0 auto;
     padding-top: 15px;
-    width: 15%; }
+    text-align: center; }
 
 /*-----------2NDARY--------------*/
+@media screen and (max-width: 680px) {
+  #contact ul li {
+    margin: 12px; } }
+@media screen and (max-width: 480px) {
+  #work .pieces .box {
+    margin-bottom: 10px; }
+  #work .pieces a {
+    display: block;
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

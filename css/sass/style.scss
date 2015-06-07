@@ -18,9 +18,11 @@ $sm_text: 20px;
 $lil_text: 15px;
 
 //WORK IMGE URLS
-$work1: url('../img/logo.png');
+$work1: url('../img/doors-open.png');
 $work2: url('../img/CITF-home.png');
-$work3: url('../img/logo.png');
+//$work3: url('../img/hospital.png');
+$work3: url('../img/graffito.png');
+
 
 //BACKGROUND IMAGES
 //$back1: url('../img/back1.png');
@@ -202,29 +204,50 @@ header{
 			background-position: 0 -50;
 			//border:1px solid orange;
 			clear:both;
-			height:100%;
+			height:100vh;
+			//border:1px solid red;
 
 			#pattern{
-				border:1px solid transparent;
+				//border:1px solid black;
 				border-radius:5px;
 				//height:365px;
-				height:100%;
-				width:100%;
+				height:80%;
+				width:95%;
 				margin: 0 auto;
+				position:relative;
 				background: $back5;
-				background-size:100%;
+				background-position: center;
+			//	background-size:100%;
 				background-repeat: no-repeat;
 
 				#text{
 					font-size: 17px;
 					font-family: $main_font;
 					//text-align: center;
-					width:55%;
+					width:75%;
 					margin: 0 auto;
 					line-height: 140%;
-					position:relative;
+					position:absolute;
+
 					top:23%;
-					left:5%;
+					left:12%;
+
+					h3{
+						font-family: $heading_font;
+						font-size: $md_text;
+						margin-bottom: 20px;
+
+					}
+
+					a{
+						text-decoration: none;
+						color: $accent;
+
+					}
+					a:hover{
+						text-decoration:line-through;
+
+					}
 				}
 			}
 
@@ -262,6 +285,7 @@ header{
 					background:$work2;
 					background-size:cover;
 					background-position: center;
+
 				}
 
 				#work3{
@@ -315,36 +339,40 @@ header{
 			background:url('../img/gradient3.png');
 
 			p{
+
 				font-family: $main_font;
 				font-size: 17px;
-				margin:0 auto;
 				padding-top:20px;
-				width:55%;
 				position: relative;
-				left:25px;
+				text-align: center;
 			}
 
 			ul {
 				padding-top:200px;
 				margin: 0 auto;
-				width:40%;
+				width:100%;
+				text-align: center;
 			}
 
 			ul li{
-				float:left;
-				margin:9px;
+			 //   margin:12px;
+				display: inline-block;
+				width: 10%;
+
 			}
 
 			a{				
                 padding: 10px;
-				position: inline-block;
+				//display: inline-block;
 				color: $white;
 				text-decoration: none;
+				
 			}
 
-			li:hover{
-				font-size: $sm_text;
-				margin:0;
+			li a:hover{
+				//font-size: $sm_text;
+				//margin-bottom:9px;
+				color: $black;
 			}
 		}
 
@@ -407,11 +435,45 @@ footer{
 
 	p {
 		color: $white; 
-		margin: 0 auto;
+	//	margin: 0 auto;
 		padding-top:15px;
-		width: 15%;
+	//	width: 15%;
+		text-align:center;
 	}
 }
 
 /*-----------2NDARY--------------*/
 
+@media screen and (max-width: 680px) {
+    * {
+       // background-color: lightblue;
+    }
+
+    #contact{
+
+    	ul li {
+    		//border:1px solid red;
+    		margin:12px;
+    		
+    	}
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    #work{
+    	.pieces{
+			.box {
+					margin-bottom: 10px;
+			 }
+
+	    	a{
+	    		
+	    		display: block;
+	    		width:100%;
+	    		
+	    	}
+   		 }
+    }
+}
