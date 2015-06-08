@@ -42,6 +42,7 @@ body, html {
 body{
 	font-family: $main_font;
 	font-size: 15px;
+	padding:0;
 }
 
 h2{
@@ -205,6 +206,8 @@ header{
 			//border:1px solid orange;
 			clear:both;
 			height:100vh;
+			padding:0;
+			margin:0;
 			//border:1px solid red;
 
 			#pattern{
@@ -214,6 +217,7 @@ header{
 				height:80%;
 				width:95%;
 				margin: 0 auto;
+				padding:0;
 				position:relative;
 				background: $back5;
 				background-position: center;
@@ -267,12 +271,13 @@ header{
 				//margin: 0 auto;
 
 				.box {
+
 					border-radius:5px;
 					border:1px solid black;
 					display: inline-block;
 					height: 250px;
 					overflow:hidden;
-					width:30%;		
+					width: 30%;		
 				}
 
 				#work1{
@@ -442,7 +447,6 @@ footer{
 	}
 }
 
-/*-----------2NDARY--------------*/
 
 @media screen and (max-width: 680px) {
     * {
@@ -462,18 +466,42 @@ footer{
 
 @media screen and (max-width: 480px){
 
-    #work{
-    	.pieces{
-			.box {
-					margin-bottom: 10px;
-			 }
+	body{
+		overflow-x: hidden; 
+	}
 
-	    	a{
-	    		
-	    		display: block;
-	    		width:100%;
+
+
+    #work{
+
+    	.pieces{
+			border: 1px solid red;
+
+			.box{
+				//border: 1px solid green;
+				display: block;
+				border: none;
+				margin-bottom: 10px;
+				width:70%;
+
+			}
+
+	    	a{	    		
+	    		//display: block;
+	    		//	width:100%;
 	    		
 	    	}
    		 }
+    
+	}
+    #about{
+    //	width:100%;
+    	border: 1px solid red;
+    	#pattern{
+    		border: 1px solid black;
+    		#text{
+
+    		}
+    	}
     }
 }
