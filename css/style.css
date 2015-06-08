@@ -110,10 +110,8 @@ header {
     #wrapper #scroll #about {
       background-size: 100%;
       background-repeat: no-repeat;
-      background-position: 0 -50;
-      clear: both;
       height: 100vh;
-      padding: 0;
+      padding-top: 80px;
       margin: 0; }
       #wrapper #scroll #about #pattern {
         border-radius: 5px;
@@ -268,17 +266,15 @@ footer {
   body {
     overflow-x: hidden; }
 
-  #work .pieces {
+  #wrapper #scroll #work .pieces {
     border: 1px solid red; }
-    #work .pieces .box {
+    #wrapper #scroll #work .pieces .box {
       display: block;
-      border: none;
       margin-bottom: 10px;
       width: 70%; }
-
-  #about {
+  #wrapper #scroll #about {
     border: 1px solid red; }
-    #about #pattern {
+    #wrapper #scroll #about #pattern {
       border: 1px solid black; } }
 
 /*# sourceMappingURL=style.css.map */

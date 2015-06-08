@@ -202,11 +202,8 @@ header{
 			//background:$back4;
 			background-size:100%;
 			background-repeat: no-repeat;
-			background-position: 0 -50;
-			//border:1px solid orange;
-			clear:both;
 			height:100vh;
-			padding:0;
+			padding-top:80px;
 			margin:0;
 			//border:1px solid red;
 
@@ -470,8 +467,8 @@ footer{
 		overflow-x: hidden; 
 	}
 
-
-
+#wrapper{
+#scroll{
     #work{
 
     	.pieces{
@@ -480,7 +477,6 @@ footer{
 			.box{
 				//border: 1px solid green;
 				display: block;
-				border: none;
 				margin-bottom: 10px;
 				width:70%;
 
@@ -504,4 +500,6 @@ footer{
     		}
     	}
     }
+}
+}
 }
